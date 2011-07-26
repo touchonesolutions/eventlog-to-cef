@@ -2,6 +2,6 @@ nmake clean
 del *.exe
 del *.dll
 nmake all
-copy evtsys.exe s:\Apps\EvtSys\x\
-copy evtsys.dll s:\Apps\EvtSys\x\
+copy evtcef.exe s:\Apps\EvtSys\x\
+copy evtcef.dll s:\Apps\EvtSys\x\
 
