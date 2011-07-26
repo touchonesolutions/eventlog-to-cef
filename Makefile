@@ -36,10 +36,10 @@ CFLAGS=/W3 /nologo /Zi
 SYS_LIB=advapi32.lib wsock32.lib dhcpcsvc.lib iphlpapi.lib user32.lib ws2_32.lib dnsapi.lib
 OFILES=check.obj eventlog.obj getopt.obj log.obj loop.obj main.obj registry.obj service.obj support.obj syslog.obj winevent.obj wsock.obj dhcp.obj dns.obj
 
-all:		evtsys.exe evtsys.dll
+all:		evtcef.exe evtcef.dll
 
-evtsys.exe:	$(OFILES) verexe.res
-		link /INCREMENTAL:NO /DEBUG /OPT:REF /OPT:ICF /RELEASE /map:evtsys.map /DELAYLOAD:wevtapi.dll /out:evtsys.exe $(OFILES) verexe.res $(SYS_LIB)
+evtcef.exe:	$(OFILES) verexe.res
+		link /INCREMENTAL:NO /DEBUG /OPT:REF /OPT:ICF /RELEASE /map:evtcef.map /DELAYLOAD:wevtapi.dll /out:evtcef.exe $(OFILES) verexe.res $(SYS_LIB)
 
 check.obj:	check.c
 		cl $(CFLAGS) /c /MT check.c
@@ -86,8 +86,8 @@ wsock.obj:	wsock.c
 verexe.res:	ver.rc
 		rc /r /n /fo verexe.res ver.rc
 
-evtsys.dll:	dllmain.obj dllmsg.res verdll.res
-		link /dll /out:evtsys.dll dllmain.obj dllmsg.res verdll.res
+evtcef.dll:	dllmain.obj dllmsg.res verdll.res
+		link /dll /out:evtcef.dll dllmain.obj dllmsg.res verdll.res
 
 dllmain.obj:	dllmain.c
 		cl $(CFLAGS) /c dllmain.c
@@ -102,13 +102,13 @@ verdll.res:	ver.rc
 		rc /r /dVERDLL /n /fo verdll.res ver.rc
 
 clean:
-		-del evtsys.exe
-		-del evtsys.dll
-		-del evtsys.map
+		-del evtcef.exe
+		-del evtcef.dll
+		-del evtcef.map
 		-del dllmsg.rc
 		-del dllmsg.h
 		-del msg00001.bin
-		-del evtsys.pdb
+		-del evtcef.pdb
 		-del vc100.pdb
 		-del *.res
 		-del *.obj

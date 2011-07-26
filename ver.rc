@@ -18,17 +18,17 @@ BEGIN
 	BEGIN
 		BLOCK "040904b0" // U.S. English & Unicode
 		BEGIN
-			VALUE "CompanyName", "Rochester Institute of Technology"
-			VALUE "FileDescription", "Eventlog to Syslog Utility"
+			VALUE "CompanyName", "University at Buffalo"
+			VALUE "FileDescription", "Eventlog to CEF Utility"
 			VALUE "FileVersion", VERSION
-			VALUE "InternalName", "EVTSYS"
-			VALUE "LegalCopyright", L"\x00A9 Rochester Institute of Technology"
+			VALUE "InternalName", "EVTCEF"
+			VALUE "LegalCopyright", L"\x00A9 University at Buffalo"
 #ifdef VERDLL
-			VALUE "OriginalFilename", "EVTSYS.DLL"
+			VALUE "OriginalFilename", "EVTCEF.DLL"
 #else
-			VALUE "OriginalFilename", "EVTSYS.EXE"
+			VALUE "OriginalFilename", "EVTCEF.EXE"
 #endif
-			VALUE "ProductName", "Eventlog to Syslog Utility"
+			VALUE "ProductName", "Eventlog to CEF Utility"
 			VALUE "ProductVersion", VERSION
 		END
 	END

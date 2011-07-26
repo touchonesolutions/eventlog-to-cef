@@ -74,7 +74,7 @@ typedef struct EVENT_LIST EventList;
 #define ERRMSG_SZ	256
 #define MAX_IGNORED_EVENTS	256
 #define HOSTNAME_SZ 64
-#define CONFIG_FILE	"evtsys.cfg"
+#define CONFIG_FILE	"evtcef.cfg"
 
 /* Compatibility */
 #define in_addr_t	unsigned long
